@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jaiswaladi246/Ekart.git'
+                git branch: '<Your GitHub BRANCH>', changelog: false, poll: false, url: '<Your GitHub URL>'
             }
         }
 
@@ -27,8 +27,8 @@ pipeline {
             steps {
                 sh """
                     $SCANNER_HOME/bin/sonar-scanner \
-                    -Dsonar.url=http://34.226.31.191:9000/ \
-                    -Dsonar.login=squ_62e3dd71e71a1abf9f97b9d18f86af0574b60589 \
+                    -Dsonar.url=<Your SONARQUBE URL> \
+                    -Dsonar.login=<Your SONARQUBE TOKEN> \
                     -Dsonar.projectName=shopping-cart \
                     -Dsonar.java.binaries=. \
                     -Dsonar.projectKey=shopping-cart
@@ -38,7 +38,7 @@ pipeline {
 
         stage('OWASP SCAN') {
             steps {
-                sh '/opt/dependency-check/dependency-check/bin/dependency-check.sh --project shopping-cart --scan .'
+                sh '<Your OWASP PATH> --project shopping-cart --scan .'
             }
         }
 
@@ -53,8 +53,8 @@ pipeline {
                 script {
                     withDockerRegistry(credentialsId: '6b3dadba-e387-4577-8ee8-af3d39b7e317') {
                         sh 'docker build -t shopping:latest -f docker/Dockerfile .'
-                        sh 'docker tag shopping:latest za357627acc1/shopping:latest'
-                        sh 'docker push za357627acc1/shopping:latest'
+                        sh 'docker tag shopping:latest <Your DOCKERHUB USERNAME>/shopping:latest'
+                        sh 'docker push <Your DOCKERHUB USERNAME>/shopping:latest'
                     }
                 }
             }
@@ -63,7 +63,7 @@ pipeline {
 
     post {
         success {
-            build job: 'CD pipe P2'
+            build job: '<Your 2nd PIPELINE NAME>'
         }
     }
 }

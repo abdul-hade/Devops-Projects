@@ -5,8 +5,8 @@ pipeline {
         stage('Docker Deploy to Container') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: '6b3dadba-e387-4577-8ee8-af3d39b7e317', toolName: 'docker') {
-                        sh 'docker rm shopping-cart --force && docker run -d --name shopping-cart -p 8070:8070 za357627acc1/shopping:latest'
+                    withDockerRegistry(credentialsId: '<CENSORED>', toolName: 'docker') {
+                        sh 'docker rm shopping-cart --force && docker run -d --name shopping-cart -p 8070:8070 <Your DOCKERHUB USERNAME>/shopping:latest'
                     }
                 }
             }
