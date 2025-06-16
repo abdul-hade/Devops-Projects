@@ -60,5 +60,5 @@ This project reflects a **real-world CI/CD pipeline**, built with multiple layer
 
 ---
 
-Made with ❤️ by [Zoraiz Ahmad](https://github.com/zoraiz53)
+Made by [Zoraiz Ahmad](https://github.com/zoraiz53)
 Contact ME on LINKEDIN [https://www.linkedin.com/in/zoraiz-ahmad-89b402330/]
