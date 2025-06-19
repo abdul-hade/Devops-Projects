@@ -45,5 +45,3 @@ GitHub-Jenkins integration
 ✅ Summary
 A practical DevOps project demonstrating CI/CD, Dockerization, and AWS-based deployment. Built for automation, reliability, and clean infrastructure flow.
 
-Made by [Zoraiz Ahmad](https://github.com/zoraiz53)
-Contact ME on LINKEDIN [https://www.linkedin.com/in/zoraiz-ahmad-89b402330/]
