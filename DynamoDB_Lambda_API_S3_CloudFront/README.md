@@ -71,5 +71,4 @@ A serverless web app that is:
 
 ---
 
-👨‍💻 Made by [Zoraiz Ahmad](https://github.com/zoraiz53)
-📬 Contact me on [LinkedIn](https://www.linkedin.com/in/zoraiz-ahmad-89b40233)
+👨‍💻 Made by [Abdul Hadi]
