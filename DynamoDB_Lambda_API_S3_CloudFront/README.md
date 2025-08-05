@@ -71,4 +71,5 @@ A serverless web app that is:
 
 ---
 
-👨‍💻 Made by [Abdul Hadi]
+👨‍💻 Made by [Abdul Hadi](https://github.com/abdul-hade)
+📬 Contact me on [LinkedIn](https://www.linkedin.com/in/abdul-hadi-b0a074339/)
